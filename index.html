@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicExplorer - Discover Music Genres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.jpg">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">🎵 MusicExplorer</a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="genres.html" class="nav-link">Genres</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="genres.html" class="nav-link">Genres</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="image-slider" id="imageSlider">
+                <div class="slide active">
+                    <img src="img/genre.jpg" alt="Music exploration banner">
+                    <div class="slide-content">
+                        <h2>Discover New Genres</h2>
+                        <p>Explore the world of music</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/rock fr.jpg" alt="Rock music">
+                    <div class="slide-content">
+                        <h2>Rock Music</h2>
+                        <p>Feel the power of rock</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/cannon.webp" alt="Jazz music">
+                    <div class="slide-content">
+                        <h2>Jazz Classics</h2>
+                        <p>Smooth jazz vibes</p>
+                    </div>
+                </div>
+                <button class="slider-btn prev" onclick="changeSlide(-1)">‹</button>
+                <button class="slider-btn next" onclick="changeSlide(1)">›</button>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="main-title">Welcome to MusicExplorer</h1>
+                <p class="subtitle">
+                    Discover the rich tapestry of musical genres that have shaped cultures, 
+                    emotions, and generations across the globe. From classical symphonies to 
+                    electronic beats, embark on a journey through sound.
+                </p>
+                <a href="genres.html" class="btn-hero">Start Exploring Genres</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Genres -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured Genres</h2>
+            <div class="genre-grid">
+                <div class="genre-card">
+                    <div class="genre-image">
+                        <img src="img/rocks.jpg" alt="Rock music genre">
+                        <div class="genre-overlay">
+                            <span>Explore Rock</span>
+                        </div>
+                    </div>
+                    <h3>Rock</h3>
+                    <p>Power chords, driving rhythms, and electric energy that defined generations.</p>
+                </div>
+                <div class="genre-card">
+                    <div class="genre-image">
+                        <img src="img/jazz.jpg" alt="Jazz music genre">
+                        <div class="genre-overlay">
+                            <span>Explore Jazz</span>
+                        </div>
+                    </div>
+                    <h3>Jazz</h3>
+                    <p>Sophisticated improvisation and complex harmonies in intimate settings.</p>
+                </div>
+                <div class="genre-card">
+                    <div class="genre-image">
+                        <img src="img/home2.jpg" alt="Electronic music genre">
+                        <div class="genre-overlay">
+                            <span>Explore Electronic</span>
+                        </div>
+                    </div>
+                    <h3>Electronic</h3>
+                    <p>Synthesized sounds and digital beats creating futuristic soundscapes.</p>
+                </div>
+                <div class="genre-card">
+                    <div class="genre-image">
+                        <img src="img/classical.jpg" alt="Classical music genre">
+                        <div class="genre-overlay">
+                            <span>Explore Classical</span>
+                        </div>
+                    </div>
+                    <h3>Classical</h3>
+                    <p>Timeless orchestral compositions that have shaped musical history.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Curated Collections</h3>
+                    <p>Carefully selected music from each genre to showcase its unique characteristics and evolution.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Deep Insights</h3>
+                    <p>Learn about the history, instruments, and cultural impact of each musical genre.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Global Perspective</h3>
+                    <p>Explore music from different cultures and discover how genres evolved worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- this is the Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Music Genre Explorer</h3>
+                    <p>123 Music Street, Harmony City, MC 12345</p>
+                    <p>&copy; 2024 MusicExplorer. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="genres.html">Genres</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:info@musicexplorer.com">info@musicexplorer.com</a>
+                    <a href="https://spotify.com" target="_blank">Spotify</a>
+                    <a href="https://last.fm" target="_blank">Last.fm</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

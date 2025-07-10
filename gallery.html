@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Gallery - MusicExplorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.jpg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">🎵 MusicExplorer</a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="genres.html" class="nav-link">Genres</a>
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="genres.html" class="nav-link">Genres</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Music Gallery</h1>
+            <p class="page-subtitle">
+                Visual journey through different music genres. Each image captures the essence, 
+                atmosphere, and cultural significance of various musical styles from around the world.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img src="img/jimi.jpg" alt="jimi hendrix ">
+                    <div class="gallery-overlay">
+                        <h3>Jimi Hendrix</h3>
+                        <p>The OG rock guitarist</p>
+                        <p>Click to view larger</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="img/louis.jpg" alt="louis armstrong :the king of jazz">
+                    <div class="gallery-overlay">
+                        <h3>Louis Armstrong</h3>
+                        <p>King of Jazz</p>
+                        <p>Click to view larger</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="img/daft.jpg" alt="daft punk ">
+                    <div class="gallery-overlay">
+                        <h3>Electronic Music </h3>
+                        <p>Click to view larger</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="img/orc.jpg" alt="Orchestra instruments in an elegant concert hall">
+                    <div class="gallery-overlay">
+                        <h3>Classical Concert Hall</h3>
+                        <p>Click to view larger</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="img/bts.avif" alt="Concert of the biggest pop boy band : BTS">
+                    <div class="gallery-overlay">
+                        <h3>Pop Music Concert</h3>
+                        <p>Click to view larger</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="img/hip pio.jpg" alt="Hip-hop Pioneers">
+                    <div class="gallery-overlay">
+                        <h3>Hip-Hop Pioneers</h3>
+                        <p>Click to view larger</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(6)">
+                    <img src="img/country1.jpg" alt="Top country artist">
+                    <div class="gallery-overlay">
+                        <h3>Top country artists</h3>
+                        <p>Click to view larger</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(7)">
+                    <img src="img/bob.jpg.webp" alt="Bob Marlie">
+                    <div class="gallery-overlay">
+                        <h3>Bob Marlie</h3>
+                        <p>The reggae Legend</p>
+                        <p>Click to view larger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Info -->
+    <section class="gallery-info-section">
+        <div class="container">
+            <div class="gallery-info-card">
+                <h2 class="section-title">About Our Gallery</h2>
+                <div class="info-grid">
+                    <div class="info-block">
+                        <h3>Curated Collection</h3>
+                        <p>
+                            Our gallery features carefully selected images that represent the visual essence 
+                            of each music genre. From intimate jazz artists to energetic rock concerts, 
+                            each photograph tells a story about the culture and atmosphere surrounding different musical styles.
+                        </p>
+                    </div>
+                    <div class="info-block">
+                        <h3>High Quality Images</h3>
+                        <p>
+                            All images in our gallery are high-resolution and professionally captured to 
+                            showcase the instruments, venues, and emotions that define each genre. 
+                            Click on any thumbnail to view the full-size image with detailed descriptions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox()">×</button>
+            <button class="lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+            <button class="lightbox-next" onclick="navigateLightbox(1)">›</button>
+            <div class="lightbox-image-container">
+                <img id="lightboxImage" src="" alt="">
+                <div class="lightbox-info">
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxDescription"></p>
+                    <div id="lightboxCounter"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Music Genre Explorer</h3>
+                    <p>123 Music Street, Harmony City, MC 12345</p>
+                    <p>&copy; 2024 MusicExplorer. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="genres.html">Genres</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:info@musicexplorer.com">info@musicexplorer.com</a>
+                    <a href="https://spotify.com" target="_blank">Spotify</a>
+                    <a href="https://last.fm" target="_blank">Last.fm</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

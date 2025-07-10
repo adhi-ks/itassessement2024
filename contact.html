@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MusicExplorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.jpg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">🎵 MusicExplorer</a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="genres.html" class="nav-link">Genres</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="genres.html" class="nav-link">Genres</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">
+                Have a question about music genres? Want to suggest a new genre for our collection? 
+                We'd love to hear from you! Fill out the form below and we'll get back to you soon.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2 class="section-title">Send us a Message</h2>
+                    
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                        <button onclick="resetForm()" class="btn-hero">Send Another Message</button>
+                    </div>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name">
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="genreSuggestion">Genre Suggestion (Optional)</label>
+                            <select id="genreSuggestion" name="genreSuggestion">
+                                <option value="">Select a genre to suggest</option>
+                                <option value="blues">Blues</option>
+                                <option value="folk">Folk</option>
+                                <option value="funk">Funk</option>
+                                <option value="metal">Metal</option>
+                                <option value="punk">Punk</option>
+                                <option value="r&b">R&B</option>
+                                <option value="world">World Music</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your question, suggestion, or feedback..."></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <span id="submitText">Send Message</span>
+                            <span id="submitLoading" style="display: none;">
+                                <div class="spinner"></div>
+                                Sending Message...
+                            </span>
+                        </button>
+
+                        <p class="form-note">* Required fields</p>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@musicexplorer.com">info@musicexplorer.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🎵</div>
+                            <div>
+                                <h4>Genre Suggestions</h4>
+                                <a href="mailto:genres@musicexplorer.com">genres@musicexplorer.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>123 Music Street<br>Harmony City, MC 12345</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Response Time</h3>
+                        <p>
+                            We typically respond to all inquiries within 24 hours. For genre suggestions, 
+                            we review submissions weekly and will notify you if we add your suggested 
+                            genre to our collection.
+                        </p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Quick Questions?</h3>
+                        <p>Before reaching out, you might find answers in our frequently asked questions.</p>
+                        <a href="https://example.com/faq" target="_blank">View FAQ →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Music Genre Explorer</h3>
+                    <p>123 Music Street, Harmony City, MC 12345</p>
+                    <p>&copy; 2024 MusicExplorer. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="genres.html">Genres</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:info@musicexplorer.com">info@musicexplorer.com</a>
+                    <a href="https://spotify.com" target="_blank">Spotify</a>
+                    <a href="https://last.fm" target="_blank">Last.fm</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

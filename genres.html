@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Genres - MusicExplorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.jpg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">🎵 MusicExplorer</a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="genres.html" class="nav-link active">Genres</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="genres.html" class="nav-link">Genres</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Music Genres</h1>
+            <p class="page-subtitle">
+                Explore the diverse world of musical genres, each with its unique characteristics, 
+                instruments, and cultural significance. From the raw energy of rock to the 
+                sophisticated improvisation of jazz.
+            </p>
+        </div>
+    </section>
+
+    <!-- Genre Comparison Table -->
+    <section class="table-section">
+        <div class="container">
+            <h2 class="section-title">Genre Comparison</h2>
+            <div class="table-container">
+                <table class="genre-table">
+                    <thead>
+                        <tr>
+                            <th>Genre</th>
+                            <th>Primary Instruments</th>
+                            <th colspan="2">Key Characteristics</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rock</td>
+                            <td>Electric Guitar, Bass, Drums</td>
+                            <td>High Energy</td>
+                            <td>Powerful Vocals</td>
+                        </tr>
+                        <tr>
+                            <td>Jazz</td>
+                            <td>Saxophone, Trumpet, Piano</td>
+                            <td rowspan="2">Complex Harmony & Improvisation</td>
+                            <td>Swing Rhythm</td>
+                        </tr>
+                        <tr>
+                            <td>Classical</td>
+                            <td>Orchestra Instruments</td>
+                            <td>Formal Structure</td>
+                        </tr>
+                        <tr>
+                            <td>Electronic</td>
+                            <td>Synthesizers, Computers</td>
+                            <td colspan="2">
+                                <table class="nested-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Sub-genres</th>
+                                            <th>Focus</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Techno</td>
+                                            <td>Rhythm & Repetition</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ambient</td>
+                                            <td>Atmosphere & Texture</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hip Hop</td>
+                            <td>Turntables, Microphone</td>
+                            <td>Rhythmic Speech</td>
+                            <td>Urban Culture</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Genre Grid -->
+    <section class="genre-details-section">
+        <div class="container">
+            <div class="genre-details-grid">
+                <div class="genre-detail-card">
+                    <div class="genre-detail-image">
+                        <img src="img/rock scene.jpg" alt="Rock music genre scene">
+                    </div>
+                    <h3>Rock</h3>
+                    <p>A genre characterized by a strong rhythm, simple chord structures, and electric instruments.</p>
+                    <div class="genre-info">
+                        <div class="info-item">
+                            <span class="label">Period:</span>
+                            <span>1950s - Present</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Instruments:</span>
+                            <div class="instruments">
+                                <span class="instrument">Electric Guitar</span>
+                                <span class="instrument">Bass Guitar</span>
+                                <span class="instrument">Drums</span>
+                                <span class="instrument">Vocals</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Characteristics:</span>
+                            <span>High energy, powerful vocals, distorted guitars</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="genre-detail-card">
+                    <div class="genre-detail-image">
+                        <img src="img/jazz scene.webp" alt="Jazz music genre scene">
+                    </div>
+                    <h3>Jazz</h3>
+                    <p>A genre that originated in the early 20th century featuring improvisation and complex harmonies.</p>
+                    <div class="genre-info">
+                        <div class="info-item">
+                            <span class="label">Period:</span>
+                            <span>1900s - Present</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Instruments:</span>
+                            <div class="instruments">
+                                <span class="instrument">Saxophone</span>
+                                <span class="instrument">Trumpet</span>
+                                <span class="instrument">Piano</span>
+                                <span class="instrument">Double Bass</span>
+                                <span class="instrument">Drums</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Characteristics:</span>
+                            <span>Improvisation, swing rhythm, complex harmony</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="genre-detail-card">
+                    <div class="genre-detail-image">
+                        <img src="img/e scene.jpg" alt="Electronic music genre scene">
+                    </div>
+                    <h3>Electronic</h3>
+                    <p>Music that primarily uses electronic instruments and digital technology.</p>
+                    <div class="genre-info">
+                        <div class="info-item">
+                            <span class="label">Period:</span>
+                            <span>1940s - Present</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Instruments:</span>
+                            <div class="instruments">
+                                <span class="instrument">Synthesizer</span>
+                                <span class="instrument">Drum Machine</span>
+                                <span class="instrument">Computer</span>
+                                <span class="instrument">Sampler</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Characteristics:</span>
+                            <span>Synthesized sounds, programmed beats, digital effects</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="genre-detail-card">
+                    <div class="genre-detail-image">
+                        <img src="img/c concert.jpg" alt="Classical music genre scene">
+                    </div>
+                    <h3>Classical</h3>
+                    <p>Traditional Western art music with roots in liturgical and secular music.</p>
+                    <div class="genre-info">
+                        <div class="info-item">
+                            <span class="label">Period:</span>
+                            <span>1600s - Present</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Instruments:</span>
+                            <div class="instruments">
+                                <span class="instrument">Violin</span>
+                                <span class="instrument">Piano</span>
+                                <span class="instrument">Cello</span>
+                                <span class="instrument">Flute</span>
+                                <span class="instrument">French Horn</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Characteristics:</span>
+                            <span>Complex structures, orchestral arrangements, formal composition</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="genre-detail-card">
+                    <div class="genre-detail-image">
+                        <img src="img/pop scene.jpg.webp" alt="Pop music genre scene">
+                    </div>
+                    <h3>Pop</h3>
+                    <p>Popular music aimed at a general audience with catchy melodies and hooks.</p>
+                    <div class="genre-info">
+                        <div class="info-item">
+                            <span class="label">Period:</span>
+                            <span>1950s - Present</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Instruments:</span>
+                            <div class="instruments">
+                                <span class="instrument">Vocals</span>
+                                <span class="instrument">Guitar</span>
+                                <span class="instrument">Piano</span>
+                                <span class="instrument">Drums</span>
+                                <span class="instrument">Synthesizer</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Characteristics:</span>
+                            <span>Catchy melodies, mainstream appeal, commercial production</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="genre-detail-card">
+                    <div class="genre-detail-image">
+                        <img src="img/snoppy.kpg.jpg" alt="Hip Hop music genre scene">
+                    </div>
+                    <h3>Hip Hop</h3>
+                    <p>A culture and art form featuring rhythmic speech over strong beats.</p>
+                    <div class="genre-info">
+                        <div class="info-item">
+                            <span class="label">Period:</span>
+                            <span>1970s - Present</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Instruments:</span>
+                            <div class="instruments">
+                                <span class="instrument">Turntables</span>
+                                <span class="instrument">Microphone</span>
+                                <span class="instrument">Drum Machine</span>
+                                <span class="instrument">Sampler</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Characteristics:</span>
+                            <span>Rhythmic speech, sampling, strong beats, urban culture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Era Navigation -->
+    <section class="era-section">
+        <div class="container">
+            <h3 class="section-title">Explore by Era</h3>
+            <div class="era-grid">
+                <div class="era-card">
+                    <h4>Early Era</h4>
+                    <p>Classical, Folk, Blues</p>
+                </div>
+                <div class="era-card">
+                    <h4>Golden Age</h4>
+                    <p>Jazz, Rock, Country</p>
+                </div>
+                <div class="era-card">
+                    <h4>Modern Era</h4>
+                    <p>Pop, Hip Hop, Electronic</p>
+                </div>
+                <div class="era-card">
+                    <h4>Digital Age</h4>
+                    <p>EDM, Trap, Indie</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Music Genre Explorer</h3>
+                    <p>123 Music Street, Harmony City, MC 12345</p>
+                    <p>&copy; 2024 MusicExplorer. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="genres.html">Genres</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:info@musicexplorer.com">info@musicexplorer.com</a>
+                    <a href="https://spotify.com" target="_blank">Spotify</a>
+                    <a href="https://last.fm" target="_blank">Last.fm</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
